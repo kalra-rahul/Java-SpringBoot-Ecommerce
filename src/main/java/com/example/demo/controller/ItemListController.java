@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.modal.ItemList;
 import com.example.demo.service.ItemListService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -30,4 +31,10 @@ public class ItemListController {
     public String updateItemList(@RequestBody ItemList itemListData){
         return itemListService.saveItemList(itemListData);
     }
+
+    @DeleteMapping("/save-item-list")
+    public List<ItemList> deletetemListId(){
+        return itemListService.getItemList();
+    }
+
 }
