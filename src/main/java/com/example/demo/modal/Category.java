@@ -10,7 +10,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long categoryId;
-    //@Size(min=5, message="Category Name contain atleast 5 characters")
+    //       @Size(min=5, message="Category Name contain atleast 5 characters")
     private String categoryName;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
